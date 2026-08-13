@@ -1,0 +1,8 @@
+alias sudo='sudo '
+alias ll='ls -lh'
+alias la='ls -lha'
+alias o='less'
+alias nano='nano -lw'
+alias df='df -h'
+alias free='free -h'
+

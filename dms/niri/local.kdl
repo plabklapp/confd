@@ -1,0 +1,42 @@
+layout {
+        gaps 1
+        border {
+	        width 1
+        }
+        focus-ring {
+	        width 1
+        }
+}
+
+window-rule {
+        geometry-corner-radius 1
+        clip-to-geometry true
+        tiled-state true
+        draw-border-with-background false
+}
+
+binds {
+	Mod+X { 
+		spawn "dms" "ipc" "powermenu" "toggle"; 
+	}
+}
+
+window-rule {
+	open-maximized true
+	match app-id="google-chrome"
+	match app-id="org.gnome.Nautilus"
+}
+
+input {
+	touchpad {
+        	tap
+        	dwt
+        	natural-scroll
+        	accel-speed 0.2
+    	}
+
+    	keyboard {
+        	numlock
+	}
+
+}

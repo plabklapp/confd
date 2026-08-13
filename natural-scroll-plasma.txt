@@ -1,0 +1,7 @@
+busctl --user list|grep -i touchpad
+org.kde.touchpad                                                                                                                         1641 kwin_wayland    alex :1.27         user@1000.service -       -
+
+busctl --user get-property org.kde.KWin /org/kde/KWin/InputDevice/event10 org.kde.KWin.InputDevice naturalScroll
+b false
+ 
+busctl --user set-property org.kde.KWin /org/kde/KWin/InputDevice/event10 org.kde.KWin.InputDevice naturalScroll b true
