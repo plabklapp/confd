@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = linux-cachyos
+
+[Action]
+Description = Regenerating GRUB configuration for CachyOS kernel...
+When = PostTransaction
+Exec = /usr/bin/grub-mkconfig -o /efi/grub/grub.cfg
+
