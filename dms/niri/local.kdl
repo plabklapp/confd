@@ -16,11 +16,9 @@ window-rule {
 }
 
 binds {
-
-  Mod+X { spawn "dms" "ipc" "powermenu" "toggle"; }
-  Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
-  Mod+Shift+Escape { show-hotkey-overlay; }
-
+	Mod+X { 
+		spawn "dms" "ipc" "powermenu" "toggle"; 
+	}
 }
 
 window-rule {
