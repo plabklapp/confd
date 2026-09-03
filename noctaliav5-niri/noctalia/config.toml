@@ -19,7 +19,7 @@ margin_ends = 0
 radius = 0
 shadow = false
 start = [ "launcher", "workspaces" ]
-thickness = 28
+thickness = 24
 widget_spacing = 12
 
 [desktop_widgets]
@@ -28,8 +28,9 @@ enabled = false
 [dock]
 background_opacity = 0.99999997764825821
 enabled = true
+inactive_opacity = 0.99999997764825821
 launcher_position = "start"
-pinned = [ "org.gnome.Nautilus", "com.mitchellh.ghostty", "google-chrome" ]
+pinned = [ "org.gnome.Nautilus", "com.mitchellh.ghostty", "org.mozilla.firefox" ]
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
@@ -50,6 +51,8 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
     cx = 683.0
     cy = 586.0
     output = "eDP-1"
+    placement_height = 768.0
+    placement_width = 1366.0
     rotation = 0.0
     type = "login_box"
 
@@ -70,16 +73,21 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_weather = true
 
 [shell]
+font_family = "Adwaita Sans"
 polkit_agent = true
 
+    [shell.launcher]
+    pinned = [ "org.mozilla.firefox" ]
+
 [theme]
+mode = "light"
 source = "wallpaper"
 
 [wallpaper.default]
-path = "color:#0A0C30"
+path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
 
 [wallpaper.last]
-path = "color:#0A0C30"
+path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
 
 [wallpaper.monitors.eDP-1]
 path = "color:#0A0C30"
