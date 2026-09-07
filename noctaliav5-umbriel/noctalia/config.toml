@@ -13,13 +13,13 @@ end = [
     "control-center",
     "session"
 ]
-font_family = "Inter Display"
+font_family = "Adwaita Sans"
 font_weight = 400
 margin_ends = 0
 radius = 0
 shadow = false
 start = [ "launcher", "workspaces" ]
-thickness = 28
+thickness = 24
 widget_spacing = 12
 
 [desktop_widgets]
@@ -28,8 +28,9 @@ enabled = false
 [dock]
 background_opacity = 0.99999997764825821
 enabled = true
+inactive_opacity = 0.99999997764825821
 launcher_position = "start"
-pinned = [ "org.gnome.Nautilus", "com.mitchellh.ghostty", "com.google.Chrome" ]
+pinned = [ "org.gnome.Nautilus", "com.mitchellh.ghostty", "org.mozilla.firefox" ]
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
@@ -72,13 +73,14 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_weather = true
 
 [shell]
-font_family = "Inter Display"
+font_family = "Adwaita Sans"
 polkit_agent = true
 
     [shell.launcher]
-    pinned = [ "com.google.Chrome" ]
+    pinned = [ "org.mozilla.firefox" ]
 
 [theme]
+mode = "light"
 source = "wallpaper"
 
 [wallpaper.default]

@@ -1,0 +1,42 @@
+[keybinds]
+
+"Mod+Return" = "spawn:ghostty"
+
+# Noctalia
+"Mod+ALT+L" =  "spawn:noctalia msg session lock"
+"Mod+Shift+F1" = "spawn:noctalia msg panel-toggle session"
+
+# Media and volume (see docs/user/keybinds.md#example-media-and-brightness-keys)
+"XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up"
+"XF86AudioLowerVolume" = "spawn:noctalia msg volume-down"
+"Mod+XF86AudioMute"   = "spawn:noctalia msg volume-mute"
+# "XF86AudioPlay"       = "spawn:playerctl play-pause"
+# "XF86AudioNext"       = "spawn:playerctl next"
+# "XF86AudioPrev"       = "spawn:playerctl prev"
+# Controls intended to remain usable while the session is locked use the table form.
+"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down 10", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up 10", allow_when_locked = true }
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = false
+default_size = [1020, 900]
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+
+[[window_rule]]
+match.app_id = "google-chrome"
+default_maximize_to_edges = true
+
+[[window_rule]]
+match.app_id = "org.gnome.Nautilus"
+default_maximize_to_edges = true
+
+[[layer_rule]]
+match.namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_optimized = false
