@@ -1,6 +1,6 @@
 {
-  "currentThemeName": "blue",
-  "matugenScheme": "scheme-neutral",
+  "currentThemeName": "dynamic",
+  "currentThemeCategory": "dynamic",
   "cornerRadius": 12,
   "firstDayOfWeek": 2,
   "clockFormat": "12h",
@@ -68,7 +68,7 @@
         "controlCenterButton"
       ],
       "spacing": 0,
-      "innerPadding": -8,
+      "innerPadding": 0,
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 0,
@@ -102,7 +102,9 @@
       "maximizeWidgetText": false,
       "removeWidgetPadding": false,
       "batteryColorMode": "theme",
-      "barLengthPadding": 0
+      "barLengthPadding": 0,
+      "island": false,
+      "islandUseOverlayLayer": false
     }
   ],
   "desktopClockCustomColor": {
@@ -145,5 +147,5 @@
       "trigger": "qrg"
     }
   },
-  "configVersion": 17
+  "configVersion": 18
 }
