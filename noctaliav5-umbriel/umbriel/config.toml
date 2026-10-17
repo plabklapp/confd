@@ -33,7 +33,7 @@ files = []                                      # Example: ["~/.config/umbriel/n
 # ────────────────────────────────────────────────────────────────────────────
 
 [general]
-autostart = [ "noctalia", "xwayland-satellite" ]                                  # Commands run once when the session starts
+autostart = [ "noctalia" ]                                  # Commands run once when the session starts
 # mod_key = "Super"                             # Force Super instead of nested-session Alt
 xwayland = true                                 # Requires xwayland-satellite; restart to change
 show_cheatsheet = true                          # Show the keybind overlay on startup
@@ -54,7 +54,7 @@ honor_restored_maximize = false                 # Honor restored maximized state
 # Documentation: https://docs.noctalia.dev/umbriel/configuration/#environment
 
 [environment]
-# GTK_THEME = "Adwaita:dark"
+GTK_THEME = "Adwaita:dark"
 # QT_QPA_PLATFORMTHEME = "qt5ct"
 
 # Hardware events
@@ -63,8 +63,8 @@ honor_restored_maximize = false                 # Honor restored maximized state
 # Documentation: https://docs.noctalia.dev/umbriel/configuration/#events
 
 [events]
-# lid_close = "notify-send 'The laptop lid is closed'"
-# lid_open = "notify-send 'The laptop lid is open'"
+lid_close = "notify-send 'The laptop lid is closed'"
+lid_open = "notify-send 'The laptop lid is open'"
 
 # ─────────────────────────────── Outputs ────────────────────────────────────
 # Configure monitor identity, mode, logical placement, scaling, HDR, VRR, and
@@ -111,7 +111,7 @@ honor_restored_maximize = false                 # Honor restored maximized state
 
 [workspaces]
 # Each output supports at most 64 workspaces, including empty ones.
-back_and_forth = false                          # Re-select active workspace to switch back
+back_and_forth = true                          # Re-select active workspace to switch back
 empty_above = false                             # Keep one empty workspace above active range
 
 # Workspace rules customize layout without creating workspaces. Select exactly
@@ -331,8 +331,8 @@ follows_mouse = false                           # Focus the pointer target after
 # "Mod+Shift+Down" = "window-move-down"
 # "Mod+Shift+Up" = "window-move-up"
 # "Mod+Shift+Right" = "column-move-right"
-# "Mod+F" = "window-toggle-fullscreen"           # Exit restores the previous layout size immediately
-# "Mod+Ctrl+F" = "window-toggle-maximize"
+"Mod+F" = "window-toggle-maximize"           # Exit restores the previous layout size immediately
+# "Mod+Ctrl+F" = "window-toggle-fullscreen"
 # "Mod+R" = "window-cycle-width"
 # "Mod+Shift+R" = "window-cycle-width-back"
 # "Mod+Comma" = "window-consume-left"
@@ -350,15 +350,15 @@ follows_mouse = false                           # Focus the pointer target after
 # unchanged.
 # Per-output dim and blur follow scratchpad visibility and clear when hidden.
 # Documentation: https://docs.noctalia.dev/umbriel/scratchpads/
-"Mod+Shift+Space" = "window-move-to-scratchpad"
-"Mod+Space" = "scratchpad-toggle"
-"Mod+Ctrl+Space" = "window-restore-from-scratchpad"
-"Mod+Tab" = "scratchpad-focus-next"
+#"Mod+Shift+Space" = "window-move-to-scratchpad"
+#"Mod+Space" = "scratchpad-toggle"
+#"Mod+Ctrl+Space" = "window-restore-from-scratchpad"
+#"Mod+Tab" = "scratchpad-focus-next"
 
 # Optional navigation and sizing recipes. These chords do not replace active
 # bindings above when uncommented.
-# "Mod+Page_Up" = "workspace-previous"
-# "Mod+Page_Down" = "workspace-next"
+"Mod+Page_Up" = "workspace-previous"
+"Mod+Page_Down" = "workspace-next"
 # "Mod+Shift+Page_Up" = "window-move-to-workspace-previous"
 # "Mod+Shift+Page_Down" = "window-move-to-workspace-next"
 # "Mod+Home" = "column-focus-first"
@@ -400,15 +400,15 @@ follows_mouse = false                           # Focus the pointer target after
 
 # Media and brightness
 # Documentation: https://docs.noctalia.dev/umbriel/keybinds/#example-media-and-brightness-keys
-# "XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-# "XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-# "XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 # "XF86AudioPlay" = "spawn:playerctl play-pause"
 # "XF86AudioNext" = "spawn:playerctl next"
 # "XF86AudioPrev" = "spawn:playerctl previous"
 # Binds intended to work while locked use the table form.
-# "XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down 10", allow_when_locked = true }
-# "XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up 10", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down 10", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up 10", allow_when_locked = true }
 
 # ─────────────────────────────── Layout ─────────────────────────────────────
 # Configure the default tiling mode and shared sizing behavior. Workspace rules
@@ -419,7 +419,7 @@ follows_mouse = false                           # Focus the pointer target after
 [layout]
 mode = "scrolling"                              # scrolling, dwindle, or master
 gap = 8                                         # Logical pixels between tiles, 0-500
-width_presets = [0.333, 0.5, 0.667]             # Width and height cycling fractions
+#width_presets = [0.333, 0.5, 0.667]             # Width and height cycling fractions
 
 [layout.struts]
 # Signed logical pixels reserved after panel exclusive zones. Negative values
@@ -431,10 +431,10 @@ bottom = 0
 
 [layout.scrolling]
 # direction = "horizontal"                      # horizontal or vertical strip axis
-default_width_fraction = 0.5                    # Initial width for new columns, 0.1-1.0
+#default_width_fraction = 0.5                    # Initial width for new columns, 0.1-1.0
 center_underfull_strip = true                   # Center a strip narrower than the viewport
-center_focused = false                          # Always center the focused column
-expand_single_column = true                     # Let a lone column fill the viewport
+center_focused = "never"                          # Always center the focused column
+#expand_single_column = true                     # Let a lone column fill the viewport
 
 [layout.dwindle]
 # preserve_split = false                        # Keep every split direction fixed after creation
@@ -460,13 +460,13 @@ blur_optimized = false
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
 default_floating = true
-default_size = [1020, 900]
+#default_size = [1020, 900]
 
 # Noctalia share picker
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
-default_size = [800, 600]
+#default_size = [800, 600]
 
 # Browsers expose no semantic PiP role or global position control.
 [[window_rule]]
