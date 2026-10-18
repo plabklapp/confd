@@ -322,7 +322,7 @@ follows_mouse = false                           # Focus the pointer target after
 # Uncomment a chord only when this file should own that override.
 
 # "Mod+Escape" = "session-quit"
-# "Mod+F1" = "window-focus-next"
+"Mod+Tab" = "window-focus-next"
 # "Mod+H" = "window-focus-left"
 # "Mod+J" = "window-focus-down"
 # "Mod+K" = "window-focus-up"

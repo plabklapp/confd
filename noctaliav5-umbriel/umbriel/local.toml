@@ -4,7 +4,7 @@
 
 # Noctalia
 "Mod+ALT+L" =  "spawn:noctalia msg session lock"
-"Mod+Shift+F1" = "spawn:noctalia msg panel-toggle session"
+"Mod+Shift+Q" = "spawn:noctalia msg panel-toggle session"
 
 # Media and volume (see docs/user/keybinds.md#example-media-and-brightness-keys)
 "XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up"
