@@ -30,7 +30,7 @@ background_opacity = 0.99999997764825821
 enabled = true
 inactive_opacity = 0.99999997764825821
 launcher_position = "start"
-pinned = [ "org.gnome.Nautilus", "com.mitchellh.ghostty", "org.mozilla.firefox" ]
+pinned = [ "org.gnome.Nautilus", "com.mitchellh.ghostty", "com.google.Chrome" ]
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
@@ -77,10 +77,13 @@ font_family = "Adwaita Sans"
 polkit_agent = true
 
     [shell.launcher]
+    categories = false
+    layout = "simple"
     pinned = [ "org.mozilla.firefox" ]
 
 [theme]
 mode = "light"
+shell_mode = "dark"
 source = "wallpaper"
 
 [wallpaper.default]
